@@ -19,14 +19,23 @@ public class Engine implements EngineRequirements {
 
     }
 
+    /**
+     * Accessor for fuel type
+     */
     public FuelType getFuelType() {
         return this.f;
     }
 
+    /**
+     * Accessor for max amount of fuel
+     */
     public double getMaxFuel(){
         return this.maxFuelLevel;
     }
 
+    /**
+     * Accessor for current fuel level
+     */
     public double getCurrentFuel(){
         return this.currentFuelLevel;
     }
@@ -36,6 +45,9 @@ public class Engine implements EngineRequirements {
 
     }
 
+    /**
+     * Testing if the train has enough fuel to go
+     */
     public Boolean go(){
         if (this.currentFuelLevel >= 5){
             this.currentFuelLevel = this.currentFuelLevel - 5;

@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Car implements CarRequirements {
 
@@ -19,36 +18,73 @@ public class Car implements CarRequirements {
 
     }
 
+    /**
+     * maximum amount of seats in the car
+     */
     public int getCapacity(){
         return this.maxCapacity;
     }
 
+    /**
+     * Seats remaining in the car
+     */
     public int seatsRemaining(){
         return this.maxCapacity - this.passengersOnboard.size();
     }
 
-    public boolean addPassenger(){
+    /**
+     * Adding a passenger
+     */
+    public Boolean addPassenger(Passenger passenger){
         if (this.maxCapacity > this.passengersOnboard.size()){
-       //     passengersOnboard.addAll(name);
+            this.passengersOnboard.add(passenger);
+            return true;
+       
 
+        }else{
+            return false;
         }
-        return true;
+        
     }
 
-    public boolean removePassenger(){
-        if (passengersOnboard.contains(Passenger)){
+    /**
+     * removing a passenger
+     */
+    public Boolean removePassenger(Passenger passenger){
+        if (passengersOnboard.contains(passenger)){
+            this.passengersOnboard.remove(passenger);
             return false;
         } else{
             return true;
         }
     }
 
-    public String toString(){
-        return 
-    }
+    /**
+     * printing all the passengers in a car
+     */
+    public void printManifest(){
+        String allPassengers = "";
+        Passenger person = new Passenger("temp");
+        if (this.passengersOnboard.isEmpty()){
+            System.out.println( "This car is EMPTY");
+
+        } else{
+            for (int i = 0; i < this.passengersOnboard.size(); i ++){
+                person = this.passengersOnboard.get(i);
+                allPassengers = allPassengers + (i+1) + ". " + person +"\n";
+            }
+            System.out.println(allPassengers);
+        }
+
+  
+
+        }
+
+
+
 
     public static void main(String[] args){
-        Car myCar = new Car()
+        //Car myCar = new Car()
     }
 
 
