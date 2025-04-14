@@ -21,6 +21,7 @@ public class Engine implements EngineRequirements {
 
     /**
      * Accessor for fuel type
+     * @return fuel type of engine
      */
     public FuelType getFuelType() {
         return this.f;
@@ -28,6 +29,7 @@ public class Engine implements EngineRequirements {
 
     /**
      * Accessor for max amount of fuel
+     * @return max fuel for engine
      */
     public double getMaxFuel(){
         return this.maxFuelLevel;
@@ -35,11 +37,15 @@ public class Engine implements EngineRequirements {
 
     /**
      * Accessor for current fuel level
+     * @return current fuel level of engine
      */
     public double getCurrentFuel(){
         return this.currentFuelLevel;
     }
 
+    /**
+     * Refuels the engine to the max level
+     */
     public void refuel(){
         this.currentFuelLevel = this.maxFuelLevel;
 
@@ -47,6 +53,7 @@ public class Engine implements EngineRequirements {
 
     /**
      * Testing if the train has enough fuel to go
+     * @return true if the engine has enough fuel to go, false otherwise
      */
     public Boolean go(){
         if (this.currentFuelLevel >= 5){
@@ -62,6 +69,10 @@ public class Engine implements EngineRequirements {
         }
     }
 
+    /**
+     * Summary statement of engine
+     * @return type of fuel, current fuel level, and max fuel level in a string format
+     */
     public String toString(){
         return ("Engine has fuel type " + this.f + ", current fuel level " + this.currentFuelLevel + ", and max fuel level: " + this.maxFuelLevel);
     }

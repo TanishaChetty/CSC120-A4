@@ -19,6 +19,7 @@ public class Car implements CarRequirements {
 
     /**
      * maximum amount of seats in the car
+     * @return the max capacity of the car 
      */
     public int getCapacity(){
         return this.maxCapacity;
@@ -26,6 +27,7 @@ public class Car implements CarRequirements {
 
     /**
      * Seats remaining in the car
+     * @return the amount of seats left in the car
      */
     public int seatsRemaining(){
         return this.maxCapacity - this.passengersOnboard.size();
@@ -33,6 +35,8 @@ public class Car implements CarRequirements {
 
     /**
      * Adding a passenger
+     * @param passenger the passenger to be added
+     * @return returns true if adding the passenger was successful; returns false otherwise
      */
     public Boolean addPassenger(Passenger passenger){
         if (this.maxCapacity > this.passengersOnboard.size()){
@@ -48,6 +52,8 @@ public class Car implements CarRequirements {
 
     /**
      * removing a passenger
+     * @param passenger
+     * @return returns true if removing the passenger was successful; returns false otherwise
      */
     public Boolean removePassenger(Passenger passenger){
         if (passengersOnboard.contains(passenger)){

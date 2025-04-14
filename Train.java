@@ -26,6 +26,7 @@ public class Train implements TrainRequirements{
 
     /**
      * Accessor for Car
+     * @return the desired number train car
      */
     public Car getCar(int i){
         return this.cars.get(i);
@@ -33,6 +34,7 @@ public class Train implements TrainRequirements{
 
     /**
      * Accessor for Engine
+     * @return the engine
      */
     public Engine getEngine(){
         return this.engine;
@@ -40,6 +42,7 @@ public class Train implements TrainRequirements{
 
     /**
      * Accessor for max capacity
+     * @return the max capacity of the train
      */
     public int getMaxCapacity(){
         int maxCapacity = 0;
@@ -48,9 +51,10 @@ public class Train implements TrainRequirements{
         }
         return maxCapacity;
     }
-    
+
      /**
      * Accessor for seats Remaining
+     * @return number of opean seats
      */
 
      public int seatsRemaining(){
