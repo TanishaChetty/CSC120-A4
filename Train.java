@@ -9,6 +9,10 @@ public class Train implements TrainRequirements{
 
     /**
      * Constructor for the Train class
+     * @param fuelType type of fuel for the train
+     * @param fuelCapacity how much fuel can be in the train
+     * @param nCars number of cars on the train
+     * @param passengerCapacity how many passengers can be on the train
      */
     public Train(FuelType fuelType, double fuelCapacity, int nCars, int passengerCapacity){
         this.engine = new Engine (fuelType, fuelCapacity, fuelCapacity);
@@ -44,6 +48,7 @@ public class Train implements TrainRequirements{
         }
         return maxCapacity;
     }
+    
      /**
      * Accessor for seats Remaining
      */

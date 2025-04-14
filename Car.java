@@ -3,9 +3,8 @@ import java.util.ArrayList;
 public class Car implements CarRequirements {
 
     //Attributes
-    ArrayList <Passenger> passengersOnboard;
+    private ArrayList <Passenger> passengersOnboard;
     private int maxCapacity;
-    //private int availSeats;
 
     /**
      * Constructor for Car
@@ -53,9 +52,9 @@ public class Car implements CarRequirements {
     public Boolean removePassenger(Passenger passenger){
         if (passengersOnboard.contains(passenger)){
             this.passengersOnboard.remove(passenger);
-            return false;
-        } else{
             return true;
+        } else{
+            return false;
         }
     }
 
